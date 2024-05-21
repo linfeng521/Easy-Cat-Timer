@@ -1,9 +1,10 @@
 # Easy Cat Timer
 
 Easy Cat Timer是一个非常简单计时器（倒计时）软件。
+> 增加保持窗口贴到屏幕上功能，再次单击切换恢复到原来状态（(Add Topmost attribute in WPF）
 
 （[Please click here for the English document.](README[EN].md)）
-
+![主界面](ReadMeImage/Topmost.png)
 ![主界面](ReadMeImage/MainWindow.png)
 
 <br/>

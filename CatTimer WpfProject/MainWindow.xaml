@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:CatTimer_WpfProject"
         mc:Ignorable="d"
         Title="Cat Timer v0.0.1" Width="434" Height="384" ResizeMode="NoResize"
-        
+
         AllowsTransparency="True" WindowStyle="None" Background="Transparent"
-        
+
         Loaded="MainWindow_OnLoaded"
         PreviewKeyDown="MainWindow_OnPreviewKeyDown">
 
@@ -19,7 +19,12 @@
         <TaskbarItemInfo x:Name="taskbarItemInfo"></TaskbarItemInfo>
     </Window.TaskbarItemInfo>
 
-
+    <Window.Resources>
+        <ImageBrush x:Key="Icon.Top.ImageBrush"
+                    ImageSource="/CatTimer WpfProject;component/Asset/Image/Icon/Top.png"></ImageBrush>
+        <ImageBrush x:Key="Icon.Toped.ImageBrush"
+                    ImageSource="/CatTimer WpfProject;component/Asset/Image/Icon/Toped.png"></ImageBrush>
+    </Window.Resources>
 
 
 
@@ -29,7 +34,7 @@
         <!--窗口背景-->
         <Border Background="White" CornerRadius="25" Opacity="1">
             <Border.Effect>
-                <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="20" 
+                <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="20"
                                   Opacity="0.25" Color="#FF5B5B5B"></DropShadowEffect>
             </Border.Effect>
         </Border>
@@ -55,7 +60,7 @@
 
 
                 <!--暂停面板-->
-                <local:PausedUiControl x:Name="PausedUiUserControl" 
+                <local:PausedUiControl x:Name="PausedUiUserControl"
                                        Visibility="Hidden" Clock="{Binding TimeData.CurrentTime}"></local:PausedUiControl>
 
 
@@ -82,6 +87,17 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
                                 Margin="0,0,17,0">
+
+                        <!--按钮：置顶-->
+                        <local:ButtonControl x:Name="PinWindowButtonControl"
+                                             ButtonStyle="{StaticResource ButtonStyle}"
+                                             Width="24"
+                                             Height="24"
+                                             Margin="1"
+                                             Icon="{StaticResource Icon.Top.ImageBrush}"
+                                             IconWidth="16"
+                                             IconHeight="18"
+                                             Click="AlwaysTopButton_Click" />
 
                         <!--按钮：设置-->
                         <local:ToggleControl x:Name="SettingToggleControl"

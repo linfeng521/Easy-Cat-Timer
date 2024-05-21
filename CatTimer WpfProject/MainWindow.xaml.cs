@@ -85,5 +85,23 @@ namespace CatTimer_WpfProject
             }
         }
         #endregion
+
+        private void AlwaysTopButton_Click(object sender, RoutedPropertyChangedEventArgs<bool> e)
+        {
+            // 切换当前窗口的Topmost属性值
+            this.Topmost = !this.Topmost;
+            var button = sender as ButtonControl;
+            // 根据窗口的Topmost属性设置相应的图标
+            if (this.Topmost)
+            {
+                // 如果窗口置顶了，设置为置顶图标
+                PinWindowButtonControl.Icon = (ImageBrush)Resources["Icon.Toped.ImageBrush"];
+            }
+            else
+            {
+                // 如果窗口未置顶，设置为未置顶图标
+                PinWindowButtonControl.Icon = (ImageBrush)Resources["Icon.Top.ImageBrush"];
+            }
+        }
     }
 }

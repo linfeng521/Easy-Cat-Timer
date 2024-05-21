@@ -1,7 +1,7 @@
 # Easy Cat Timer
 
 Easy Cat Timer is a very simple timer (countdown) software.
-
+> Add the function of keeping the window attached to the screen and click again to switch to the original state ((Add Topmost attribute in WPF)
 （ [中文 ](README.md)请戳这里）
 
 ![主界面](ReadMeImage/MainWindow.png)
